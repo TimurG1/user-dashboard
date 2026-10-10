@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang=uk><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AJAX Users</title><link rel=stylesheet href=/user-dashboard/user-dashboard.3c7025c8.css><body>
+    <main class=container>
+      <header class=header>
+        <div>
+          <p class=eyebrow>AJAX Practice</p>
+          <h1>Users</h1>
+        </div>
+        <button class="button button--secondary" id=refresh type=button>
+          Refresh
+        </button>
+      </header>
+      <section class=create-user>
+        <h2>Add user</h2>
+        <form id=userForm>
+          <div class=form-group>
+            <label for=name> Name </label>
+            <input id=name name=name placeholder="John Doe" required>
+          </div>
+          <div class=form-group>
+            <label for=email> Email </label>
+            <input id=email name=email type=email placeholder=john@gmail.com required>
+          </div>
+          <div class=form-group>
+            <label for=age> Age </label>
+            <input id=age name=age type=number placeholder=25 min=1 required>
+          </div>
+          <button class=button>Add user</button>
+        </form>
+      </section>
+      <section class=users>
+        <div class=users__header>
+          <h2>Users list</h2>
+          <p id=loader hidden>Loading...</p>
+        </div>
+        <p class=error id=error hidden></p>
+        <div class=users__list id=usersList></div>
+      </section>
+      <div class="backdrop is-hidden" data-backdrop>
+        <div class=modal>
+          <form id=editForm class=form>
+            <div class=form-group>
+              <label for=name> Name </label>
+              <input id=name name=name placeholder="John Doe" required>
+            </div>
+            <div class=form-group>
+              <label for=email> Email </label>
+              <input id=email name=email type=email placeholder=john@gmail.com required>
+            </div>
+            <div class=form-group>
+              <label for=age> Age </label>
+              <input id=age name=age type=number placeholder=25 min=1 required>
+            </div>
+            <button data-modal-close class="button--save button-save">
+              Save
+            </button>
+            <button type=button data-modal-close class="button--danger button-cancel">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src=/user-dashboard/user-dashboard.a7c8ed19.js type=module></script>
+  
+
