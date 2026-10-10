@@ -147,4 +147,3 @@ function onUserListClick(e) {
     openModal(userID);
   }
 }
-// function editUser(id) {}
